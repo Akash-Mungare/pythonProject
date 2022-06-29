@@ -10,6 +10,7 @@ class login_all():
     user = "mat-input-0"
     pwd = "mat-input-1"
     lSubmit = "mat-button-wrapper"
+    # add_Find = "mat-focus-indicator mat-raised-button mat-button-base"
 
 class credentials():
     ct_userName = "akash@gmail.com"
@@ -18,3 +19,6 @@ class credentials():
     nat_password = "Akash@123"
     mst_username = "akashmungare5@gmail.com"
     mst_password = "Akash@123"
+
+class manage_devices():
+    add_find = '//button[@class="mat-focus-indicator mat-raised-button mat-button-base"]'
