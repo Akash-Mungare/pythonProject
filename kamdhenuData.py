@@ -3,12 +3,12 @@ import datetime
 from datetime import timedelta
 
 f = open("SingleCoinData.txt", "w")
-gateway = "607771C67262"
-coin = (str(17)).zfill(4)
+gateway = "60777138CCCE"
+coin = (str(34)).zfill(4)
 # coin1 = ('0003','0002')
 # coin = coin1
 # print("======================== coin ======================", coin)
-find = (str(7)).zfill(4)
+find = (str("FF")).zfill(4)
 # find1 = ('0003','0002')
 # print("======================== find ======================", find)
 rssi1 = ('C8','C9','CA','CB','CC','CD','CE','CF','D0','D1','D2','D3','D4','D5','D9','DA','DB',)
@@ -17,11 +17,11 @@ rssi1 = ('C8','C9','CA','CB','CC','CD','CE','CF','D0','D1','D2','D3','D4','D5','
 # UTCTime = datetime.datetime.now() - 19800000
 utcTime = datetime.datetime.now(datetime.timezone.utc)
 utc = utcTime.strftime("%Y-%m-%d %H:%M:%S")
-x=16
+x=20
 j=4
 for i in range(x):
     rssi = choice(rssi1)
-    diffTime = utcTime - timedelta(hours=1, minutes=9, seconds=-j)
+    diffTime = utcTime - timedelta(hours=0, minutes=58, seconds=-j)
     dd = ((hex(utcTime.day).upper()).removeprefix('0X')).zfill(2)
     hh = ((hex(diffTime.hour).upper()).removeprefix('0X')).zfill(2)
     mm = ((hex(diffTime.minute).upper()).removeprefix('0X')).zfill(2)
@@ -32,7 +32,7 @@ for i in range(x):
     print(data,"\n")
     print("============================length of data===================",len(data))
     f.write(data + "\n")
-    j+=20
+    j+=21
     continue
 offline = str("03")
 data = gateway+coin+find+offline+dd+hh+mm+ss+dataType+btr
