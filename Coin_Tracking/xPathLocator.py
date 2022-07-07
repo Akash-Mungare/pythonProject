@@ -24,3 +24,4 @@ class manage_assets():
     add_find_btn = '//button[@class="mat-focus-indicator mat-raised-button mat-button-base"]' 
     add_find = "number"
     add_find_submit = '//button[@class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"]'
+    22
