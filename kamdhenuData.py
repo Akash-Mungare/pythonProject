@@ -4,11 +4,11 @@ from datetime import timedelta
 
 f = open("SingleCoinData.txt", "w")
 gateway = "1234567890AC"
-coin = (str(4)).zfill(4)
+coin = (str(6)).zfill(4)
 # coin1 = ('0003','0002')
 # coin = coin1
 # print("======================== coin ======================", coin)
-find = (str("02")).zfill(4)
+find = (str("03")).zfill(4)
 # find1 = ('0003','0002')
 # print("======================== find ======================", find)
 rssi1 = ('C8','C9','CA','CB','CC','CD','CE','CF','D0','D1','D2','D3','D4','D5','D9','DA','DB',)
@@ -21,7 +21,7 @@ x=20
 j=4
 for i in range(x):
     rssi = choice(rssi1)
-    diffTime = utcTime - timedelta(hours=0, minutes=58, seconds=-j)
+    diffTime = utcTime - timedelta(hours=0, minutes=8, seconds=-j)
     dd = ((hex(utcTime.day).upper()).removeprefix('0X')).zfill(2)
     hh = ((hex(diffTime.hour).upper()).removeprefix('0X')).zfill(2)
     mm = ((hex(diffTime.minute).upper()).removeprefix('0X')).zfill(2)
@@ -32,7 +32,7 @@ for i in range(x):
     print(data,"\n")
     print("============================length of data===================",len(data))
     f.write(data + "\n")
-    j+=31
+    j+=29
     continue
 offline = str("03")
 data = gateway+coin+find+offline+dd+hh+mm+ss+dataType+btr
