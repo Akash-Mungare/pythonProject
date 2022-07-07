@@ -3,8 +3,8 @@ import datetime
 from datetime import timedelta
 
 f = open("SingleCoinData.txt", "w")
-gateway = "1234567890AB"
-coin = (str(4)).zfill(4)
+gateway = "1234567890AC"
+coin = (str(7)).zfill(4)
 # coin1 = ('0003','0002')
 # coin = coin1
 # print("======================== coin ======================", coin)
@@ -29,7 +29,7 @@ for i in range(x):
     else:
         rssi2 = ('C9','CA','CB','CC','CD','CE','CF','D0','D1','D2','D3','D4','D5','D6','D7','D8','D9','DA','DB','DC','DD','DE','DF','E0','E1')
         rssi = choice(rssi2)
-    diffTime = utcTime - timedelta(hours=2, minutes=10, seconds=-j)
+    diffTime = utcTime - timedelta(hours=1, minutes=10, seconds=-j)
     # print("======================== now()======================", diffTime)
     dd = ((hex(utcTime.day).upper()).removeprefix('0X')).zfill(2)
     # dd = utcdd.zfill(2)
@@ -44,10 +44,10 @@ for i in range(x):
     print(data,"\n")
     print("============================length of data===================",len(data))
     f.write(data + "\n")
-    j+=27
+    j+=17
     continue
-offline = str("03")
-data = gateway+coin+find+offline+dd+hh+mm+ss+dataType+btr
+# offline = str("03")
+# data = gateway+coin+find+offline+dd+hh+mm+ss+dataType+btr
 f.write(data)
 
 f.close()
