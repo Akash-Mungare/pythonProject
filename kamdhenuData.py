@@ -3,12 +3,12 @@ import datetime
 from datetime import timedelta
 
 f = open("SingleCoinData.txt", "w")
-gateway = "60777138CCCE"
-coin = (str(34)).zfill(4)
+gateway = "1234567890AC"
+coin = (str(4)).zfill(4)
 # coin1 = ('0003','0002')
 # coin = coin1
 # print("======================== coin ======================", coin)
-find = (str("FF")).zfill(4)
+find = (str("02")).zfill(4)
 # find1 = ('0003','0002')
 # print("======================== find ======================", find)
 rssi1 = ('C8','C9','CA','CB','CC','CD','CE','CF','D0','D1','D2','D3','D4','D5','D9','DA','DB',)
@@ -32,7 +32,7 @@ for i in range(x):
     print(data,"\n")
     print("============================length of data===================",len(data))
     f.write(data + "\n")
-    j+=21
+    j+=31
     continue
 offline = str("03")
 data = gateway+coin+find+offline+dd+hh+mm+ss+dataType+btr
