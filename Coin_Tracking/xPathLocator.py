@@ -20,5 +20,7 @@ class credentials():
     mst_username = "akashmungare5@gmail.com"
     mst_password = "Akash@123"
 
-class manage_devices():
-    add_find = '//button[@class="mat-focus-indicator mat-raised-button mat-button-base"]'
+class manage_assets():
+    add_find_btn = '//button[@class="mat-focus-indicator mat-raised-button mat-button-base"]' 
+    add_find = "number"
+    add_find_submit = '//button[@class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"]'

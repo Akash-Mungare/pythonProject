@@ -19,6 +19,8 @@ utcTime = datetime.datetime.now(datetime.timezone.utc)
 utc = utcTime.strftime("%Y-%m-%d %H:%M:%S")
 x=20
 j=4
+
+#========================== Trip 5 ===============================
 for i in range(x):
     rssi = choice(rssi1)
     diffTime = utcTime - timedelta(hours=0, minutes=2, seconds=-j)
@@ -34,6 +36,8 @@ for i in range(x):
     f.write(data + "\n")
     j+=14
     continue
+
+#========================== Trip 3 ===============================
 for i in range(x):
     rssi = choice(rssi1)
     diffTime = utcTime - timedelta(hours=2, minutes=22, seconds=-j)
@@ -49,6 +53,8 @@ for i in range(x):
     f.write(data + "\n")
     j+=15
     continue
+
+#========================== Trip 4 ===============================
 for i in range(x):
     rssi = choice(rssi1)
     diffTime = utcTime - timedelta(hours=1, minutes=12, seconds=-j)
@@ -64,6 +70,8 @@ for i in range(x):
     f.write(data + "\n")
     j+=15
     continue
+
+#========================== Trip 1 ===============================
 for i in range(x):
     rssi = choice(rssi1)
     diffTime = utcTime - timedelta(hours=4, minutes=42, seconds=-j)
@@ -79,6 +87,8 @@ for i in range(x):
     f.write(data + "\n")
     j+=15
     continue
+
+#========================== Trip 2 ===============================
 for i in range(x):
     rssi = choice(rssi1)
     diffTime = utcTime - timedelta(hours=3, minutes=32, seconds=-j)
