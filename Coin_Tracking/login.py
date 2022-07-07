@@ -2,17 +2,17 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from xPathLocator import *
-from manageDevices import *
+from manageDevices import manage_Find
 # from index import selectorNum
 xpath_L = login_all()
 cred = credentials()
-asset = manage_assets()
 # num= selectorNum
-manage_Asset = manage_Devices()
+Asset = manage_Find()
 
 
 class webelement():
-    def login(self):
+    # driver = webdriver.Chrome(executable_path="C:\\Selenium\chromedriver.exe")
+    def web_login(self):
         list = ["1. MSIL Testing", "2.NewAT Testing", "3.CT Server"]
         print("List of server : ", list, "\n")
 
@@ -42,8 +42,8 @@ class webelement():
             time.sleep(2)
             driver.find_element(By.CLASS_NAME,xpath_L.lSubmit).click()
             time.sleep(8)
-            driver.find_element(By.CLASS_NAME,asset.add_find).click()
-            time.sleep(2)
+            # driver.find_element(By.CLASS_NAME,asset.add_find).click()
+            # time.sleep(2)
         elif x == 3:
             # driver = webdriver.Chrome(executable_path="C:\\Selenium\chromedriver.exe")
             # driver.maximize_window()
@@ -55,8 +55,7 @@ class webelement():
             time.sleep(2)
             driver.find_element(By.CLASS_NAME,xpath_L.lSubmit).click()
             time.sleep(6)
-            driver.find_element(By.XPATH,asset.add_find_btn).click()
-            driver.find_element(By.TYPE,asset.add_find).send_keys()
+            Asset.add_Assets()
             time.sleep(6)
         else:
             print("Wrong Input value!!! Please select correct input")

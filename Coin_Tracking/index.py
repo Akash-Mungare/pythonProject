@@ -2,4 +2,4 @@ from login import webelement
 
 
 findbyid = webelement()
-findbyid.login()
+findbyid.web_login()
