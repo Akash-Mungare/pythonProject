@@ -2,13 +2,11 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from xPathLocator import *
-from manageDevices import manage_Find
+from manageDevices import add_Assets
 # from index import selectorNum
 xpath_L = login_all()
 cred = credentials()
 # num= selectorNum
-Asset = manage_Find()
-
 
 class webelement():
     # driver = webdriver.Chrome(executable_path="C:\\Selenium\chromedriver.exe")
@@ -55,8 +53,7 @@ class webelement():
             time.sleep(2)
             driver.find_element(By.CLASS_NAME,xpath_L.lSubmit).click()
             time.sleep(6)
-            Asset.add_Assets()
-            time.sleep(6)
+            manage_device = add_Assets(driver)
         else:
             print("Wrong Input value!!! Please select correct input")
             return self.login()
