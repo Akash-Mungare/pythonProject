@@ -4,11 +4,11 @@ from datetime import timedelta
 
 f = open("SingleCoinData.txt", "w")
 gateway = "1234567890AC"
-coin = (str("0A")).zfill(4)
+coin = (str("0E")).zfill(4)
 # coin1 = ('0003','0002')
 # coin = coin1
 # print("======================== coin ======================", coin)
-find = (str("02")).zfill(4)
+# find = (str("02")).zfill(4)
 # find1 = ('0003','0002')
 # print("======================== find ======================", find)
 rssi1 = ('C8','C9','CA','CB','CC','CD','CE','CF','D0','D1','D2','D3','D4','D5','D9','DA','DB',)
@@ -22,8 +22,9 @@ j=4
 
 #========================== Trip 5 ===============================
 for i in range(x):
+    find = (str("01")).zfill(4)
     rssi = choice(rssi1)
-    diffTime = utcTime - timedelta(hours=0, minutes=2, seconds=-j)
+    diffTime = utcTime - timedelta(hours=8, minutes=0, seconds=-j)
     dd = ((hex(utcTime.day).upper()).removeprefix('0X')).zfill(2)
     hh = ((hex(diffTime.hour).upper()).removeprefix('0X')).zfill(2)
     mm = ((hex(diffTime.minute).upper()).removeprefix('0X')).zfill(2)
@@ -39,8 +40,9 @@ for i in range(x):
 
 #========================== Trip 3 ===============================
 for i in range(x):
+    find = (str("02")).zfill(4)
     rssi = choice(rssi1)
-    diffTime = utcTime - timedelta(hours=2, minutes=22, seconds=-j)
+    diffTime = utcTime - timedelta(hours=7, minutes=0, seconds=-j)
     dd = ((hex(utcTime.day).upper()).removeprefix('0X')).zfill(2)
     hh = ((hex(diffTime.hour).upper()).removeprefix('0X')).zfill(2)
     mm = ((hex(diffTime.minute).upper()).removeprefix('0X')).zfill(2)
@@ -56,8 +58,9 @@ for i in range(x):
 
 #========================== Trip 4 ===============================
 for i in range(x):
+    find = (str("03")).zfill(4)
     rssi = choice(rssi1)
-    diffTime = utcTime - timedelta(hours=1, minutes=12, seconds=-j)
+    diffTime = utcTime - timedelta(hours=6, minutes=0, seconds=-j)
     dd = ((hex(utcTime.day).upper()).removeprefix('0X')).zfill(2)
     hh = ((hex(diffTime.hour).upper()).removeprefix('0X')).zfill(2)
     mm = ((hex(diffTime.minute).upper()).removeprefix('0X')).zfill(2)
@@ -73,8 +76,9 @@ for i in range(x):
 
 #========================== Trip 1 ===============================
 for i in range(x):
+    find = (str("04")).zfill(4)
     rssi = choice(rssi1)
-    diffTime = utcTime - timedelta(hours=4, minutes=42, seconds=-j)
+    diffTime = utcTime - timedelta(hours=5, minutes=0, seconds=-j)
     dd = ((hex(utcTime.day).upper()).removeprefix('0X')).zfill(2)
     hh = ((hex(diffTime.hour).upper()).removeprefix('0X')).zfill(2)
     mm = ((hex(diffTime.minute).upper()).removeprefix('0X')).zfill(2)
@@ -90,8 +94,9 @@ for i in range(x):
 
 #========================== Trip 2 ===============================
 for i in range(x):
+    find = (str("05")).zfill(4)
     rssi = choice(rssi1)
-    diffTime = utcTime - timedelta(hours=3, minutes=32, seconds=-j)
+    diffTime = utcTime - timedelta(hours=4, minutes=0, seconds=-j)
     dd = ((hex(utcTime.day).upper()).removeprefix('0X')).zfill(2)
     hh = ((hex(diffTime.hour).upper()).removeprefix('0X')).zfill(2)
     mm = ((hex(diffTime.minute).upper()).removeprefix('0X')).zfill(2)
